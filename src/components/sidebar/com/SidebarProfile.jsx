@@ -9,7 +9,7 @@ function SidebarProfile() {
      </div>
 
       <div className="leading-tight">
-        <div className="truncate text-xs font-medium text-foreground">Dhanushka Gunawardhana</div>
+        <div className="truncate text-xs font-medium text-foreground">Minidu Lochana</div>
         <div className="truncate mt-0.5 text-[11px] text-muted-foreground">Stock Manager</div>
         <div className="truncate mt-0.5 text-[10px] text-muted-foreground">Colombo Central Warehouse</div>
       </div>
