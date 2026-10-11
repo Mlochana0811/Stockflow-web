@@ -1,35 +1,64 @@
-import {
-    Login,
-    StockRequests,
-    ReturnApprovals,
-    StockSummary,
-    DistributionRuns,
-} from "@/pages";
+import * as Pages from "@/pages";
 
 export const routes = [
-    {
-        route: "/",
-        page: <StockSummary />
-    },
-    {
-        route: "/login",
-        page: <Login />
-        },
+  // Auth
+  {
+    title: "Login",
+    route: "/login",
+    page: <Pages.Login />,
+  },
+  {
+    title: "Sign up",
+    route: "/sign-up",
+    page: <Pages.SignUp />,
+  },
 
-    {
-        route: "/stock-requests",
-        page: <StockRequests /> 
-    },
-    {
-        route: "/return-approvals",
-        page: <ReturnApprovals />
-    },
-    {
-        route: "/stock-summary",
-        page: <StockSummary />
-    },
-    {
-        route: "/distribution-runs",
-        page: <DistributionRuns />
-    }
-    ]
+  // Stock Manager
+  {
+    title: "Stock Summary",
+    route: "/",
+    page: <Pages.StockSummary />,
+  },
+  {
+    title: "Stock Summary",
+    route: "/stock-summary",
+    page: <Pages.StockSummary />,
+  },
+  {
+    title: "Stock Requests",
+    route: "/stock-requests",
+    page: <Pages.StockRequests />,
+  },
+  {
+    title: "Distribution Runs",
+    route: "/distribution-runs",
+    page: <Pages.DistributionRuns />,
+  },
+  {
+    title: "Return Approvals",
+    route: "/return-approvals",
+    page: <Pages.ReturnApprovals />,
+  },
+
+  // FDO
+  {
+    title: "Stock Requests",
+    route: "/fdo",
+    page: <Pages.FDOStockRequests />,
+  },
+  {
+    title: "Stock Requests",
+    route: "/fdo/stock-requests",
+    page: <Pages.FDOStockRequests />,
+  },
+  {
+    title: "Distributions",
+    route: "/fdo/distributions",
+    page: <Pages.FDODistributions />,
+  },
+  {
+    title: "Run History",
+    route: "/fdo/run-history",
+    page: <Pages.FDORunHistory />,
+  },
+];

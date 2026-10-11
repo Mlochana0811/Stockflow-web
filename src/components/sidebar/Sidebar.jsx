@@ -1,14 +1,15 @@
-import { sidebarNavigation, sidebarProfile } from "@/data/nav_sidebar";
-import SidebarHeader from "./SidebarHeader";
-import SidebarNav from "./SidebarNav";
-import SidebarProfile from "./SidebarProfile";
-function Sidebar() {
+import React from "react";
+
+import { SidebarHeader, SidebarNav, SidebarProfile } from "./com";
+
+function Sidebar({ nav, profile, header }) {
   return (
-    <aside className="sticky top-0 h-screen w-60 shrink-0 flex-col border-r border-border bg-background lg:flex">
-      {" "}
-      <SidebarHeader /> <SidebarNav items={sidebarNavigation} />{" "}
-      <SidebarProfile profile={sidebarProfile} />{" "}
-    </aside>
+    <div className="sticky top-0 h-screen z-40 w-60 border-r border-border bg-background flex flex-col">
+      <SidebarHeader header={header} />
+      <SidebarNav items={nav} />
+      <SidebarProfile profile={profile} />
+    </div>
   );
 }
+
 export default Sidebar;
